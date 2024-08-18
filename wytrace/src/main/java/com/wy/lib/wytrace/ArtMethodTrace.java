@@ -3,6 +3,7 @@ package com.wy.lib.wytrace;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.os.Build;
+import android.util.Log;
 
 import com.bytedance.shadowhook.ShadowHook;
 
@@ -44,6 +45,7 @@ public class ArtMethodTrace {
     public static void fix14debugApp(Context context) {
         if (Build.VERSION.SDK_INT == 34 && (context.getApplicationInfo().flags & ApplicationInfo.FLAG_DEBUGGABLE) != 0) {
             bootImageNterp();
+            Log.i("fix14debugApp", "hooked");
         }
     }
 

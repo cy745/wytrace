@@ -59,20 +59,10 @@ publishing {
             artifact("$buildDir/outputs/aar/wytrace-release.aar")
         }
     }
-//    repositories {
-//        maven {
-//            // 配置 Maven 仓库信息
-//            url mavenRepositoryUrl
-//            credentials {
-//                username mavenRepositoryUsername
-//                password mavenRepositoryPassword
-//            }
-//        }
-//    }
 }
 
 
 dependencies {
     implementation "androidx.startup:startup-runtime:1.1.1"
-    implementation "com.bytedance.android:shadowhook:1.0.10"
+    api "com.bytedance.android:shadowhook:1.0.10"
 }
